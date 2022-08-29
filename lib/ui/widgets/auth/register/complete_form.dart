@@ -228,10 +228,10 @@ class _CompleteRegisterFormState extends State<CompleteRegisterForm> {
                             inputFieldRegister(false, TextInputType.text, suffixInvisible, _firstNameController, "First name"),
                             inputLabel("Last name "),
                             inputFieldRegister(false, TextInputType.text, suffixInvisible, _lastNameController, "Last name"),
-                            // inputLabel("Phone number "),
-                            // inputFieldRegister(false, TextInputType.phone, suffixInvisible, _phoneNumberController, "Enter email"),
-                            // inputLabel("How did you hear about us? "),
-                            // inputFieldRegister(false, TextInputType.text, suffixInvisible, _howDoYouKnowController, "Enter email"),
+                            inputLabel("Phone number "),
+                            inputFieldRegister(false, TextInputType.phone, suffixInvisible, _phoneNumberController, "Enter email"),
+                            inputLabel("How did you hear about us? "),
+                            inputFieldRegister(false, TextInputType.text, suffixInvisible, _howDoYouKnowController, "Enter email"),
 
                             SizedBox(height: 15.0),
                             Padding(

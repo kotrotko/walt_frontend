@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:gunio/ui/widgets/auth/login/form.dart';
+//import 'package:gunio/ui/widgets/auth/login/form.dart';
+import 'package:gunio/ui/widgets/auth/login/form_one.dart';
 //import 'package:gunio/ui/widgets/auth/register/register_email_screen.dart';
 //import 'package:gunio/ui/widgets/auth/register/complete_form.dart';
 import 'package:gunio/ui/widgets/auth/register/form.dart';
@@ -127,105 +128,108 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: Text("Test", style: TextStyle(color: Colors.yellow))),
         ]),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-              SizedBox(height: 40.0),
-              Container(
-                color: Colors.black,
-                child: Image(image: AssetImage('assets/breaking-bad.jpeg'))
-              ),
-              SizedBox(height: 20.0),
-              Container(
-                    color: Colors.black,
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    height: 140.0,
-                    child: Text('Kyrgyzstan-class technical talent, on tap',
-                      style: Theme.of(context).textTheme.headline1
-                      // style: TextStyle(color:Colors.white,
-                      //     fontSize: 40.0,
-                      //     fontWeight: FontWeight.bold),
-                    )
-              ),
-              SizedBox(height: 20.0),
-              Container (
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Text('Walt helps companies scale their software engineering teams seamlessly with our global network of elite hired guns.',
-                  style: TextStyle(color: Colors.white, fontSize: 20.0,),
-                ),
-              ),
-              Row(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+              child: Column(
                 children: [
-                  Expanded(
-                    child: Container(height: 140,
-                          color: Colors.black,
-                      child: Stack(alignment: Alignment.centerRight,
-                          children: [Positioned(bottom: 20,
-                                  left: 20,
-                                  width: 150,
-                                  height: 80,
-                            child: ElevatedButton(
-                              child: Column(
-                                children: [
-                                  Padding(
-                                        padding: const EdgeInsets.only
-                                            (top: 12.0,
-                                              left: 10.0),
-                                          child: Text('Hire someone',
+                SizedBox(height: 40.0),
+                Container(
+                  color: Colors.black,
+                  child: Image(image: AssetImage('assets/breaking-bad.jpeg'))
+                ),
+                SizedBox(height: 20.0),
+                Container(
+                      color: Colors.black,
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      height: 140.0,
+                      child: Text('Kyrgyzstan technical talent, on tap',
+                        style: Theme.of(context).textTheme.headline1
+                        // style: TextStyle(color:Colors.white,
+                        //     fontSize: 40.0,
+                        //     fontWeight: FontWeight.bold),
+                      )
+                ),
+                SizedBox(height: 20.0),
+                Container (
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Text('Walt helps companies scale their software engineering teams seamlessly with our global network of elite hired guns.',
+                    style: TextStyle(color: Colors.white, fontSize: 20.0,),
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(height: 100,
+                            color: Colors.black,
+                        child: Stack(alignment: Alignment.centerRight,
+                            children: [Positioned(bottom: 20,
+                                    left: 20,
+                                    width: 150,
+                                    height: 80,
+                              child: ElevatedButton(
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                          padding: const EdgeInsets.only
+                                              (top: 12.0,
+                                                left: 10.0),
+                                            child: Text('Hire someone',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 18,
+                                                )
+                                            ),
+                                          ),
+                                    Icon(Icons.arrow_forward,
+                                              color: Colors.black
+                                          ),],
+                                      ),
+                                      onPressed: () => {},
+                                      style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.greenAccent),
+                                          shape: MaterialStateProperty.all<
+                                              RoundedRectangleBorder>(RoundedRectangleBorder
+                                                (borderRadius: BorderRadius.circular(40.0),
+                                              )
+                                          )
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Positioned(bottom: 25,
+                                      left: 140,
+                                      height: 70,
+                                      child: ElevatedButton(child:
+                                        Column(children: [
+                                          Padding(padding: const EdgeInsets.only(top: 10.0),
+                                            child: Text('Find work',
                                               style: TextStyle(
-                                                color: Colors.black,
+                                                color: Colors.white,
                                                 fontSize: 18,
                                               )
-                                          ),
-                                        ),
-                                  Icon(Icons.arrow_forward,
-                                            color: Colors.black
-                                        ),],
-                                    ),
-                                    onPressed: () => {},
-                                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.greenAccent),
-                                        shape: MaterialStateProperty.all<
-                                            RoundedRectangleBorder>(RoundedRectangleBorder
-                                              (borderRadius: BorderRadius.circular(40.0),
-                                            )
-                                        )
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  child: Positioned(bottom: 25,
-                                    left: 140,
-                                    height: 70,
-                                    child: ElevatedButton(child:
-                                      Column(children: [
-                                        Padding(padding: const EdgeInsets.only(top: 10.0),
-                                          child: Text('Find work',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18,
-                                            )
+                                          ),),
+                                          Icon(Icons.arrow_forward)],),
+                                        onPressed: () {},
+                                        style: ButtonStyle(
+                                            backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                                            shape: MaterialStateProperty.all<RoundedRectangleBorder>
+                                              (RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(35.0),
+                                                  side: BorderSide(color: Colors.greenAccent),
+                                                ))
                                         ),),
-                                        Icon(Icons.arrow_forward)],),
-                                      onPressed: () {},
-                                      style: ButtonStyle(
-                                          backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
-                                          shape: MaterialStateProperty.all<RoundedRectangleBorder>
-                                            (RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.circular(35.0),
-                                                side: BorderSide(color: Colors.greenAccent),
-                                              ))
-                                      ),),
-                                  ),
-                                ),]),
+                                    ),
+                                  ),]),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ]),
+                  ],
+                ),
+              ]),
+            ),
           ),
-        ),
+      ),
     );
   }
 }

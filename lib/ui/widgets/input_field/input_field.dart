@@ -83,7 +83,6 @@ import 'dart:async';
 class TextFormFieldWidget extends StatefulWidget {
   final TextInputType keyboardType;
   final Widget suffixContainer;
-
   final bool obscureText;
   final TextEditingController controller;
   final String validationMessage;
@@ -93,7 +92,6 @@ class TextFormFieldWidget extends StatefulWidget {
       {
         required this.keyboardType,
         required this.suffixContainer,
-
         required this.obscureText,
         required this.controller,
         required this.validationMessage,
@@ -114,6 +112,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             autofocus: true,
             obscureText: widget.obscureText,
             keyboardType: widget.keyboardType,
+            controller: TextEditingController(),
             style: TextStyle(color: Colors.white),
             decoration: InputDecoration(
               suffixIcon: widget.suffixContainer,
